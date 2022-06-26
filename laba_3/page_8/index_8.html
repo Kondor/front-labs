@@ -1,0 +1,134 @@
+<html >
+<head>
+    <title>Задание 8</title>
+    
+    <link rel="shortcut icon" href="image/wolf.png" type="image/x-icon">
+    <style>    
+        .button 
+        {
+                /* Сбрасываем дефолтные стили */
+                border: none;
+                outline: none;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: fantasy;
+                padding: 25px 30px;
+                border-radius: 200px;
+                color: black;
+        }
+        .button:hover 
+        {
+            background-color: cyan;
+        }
+        .button:active
+        {
+            background-color: lime
+        }
+        .button1 
+        {
+            border: none;
+            background: wheat; 
+            border:  4px groove wheat; 
+            outline: none;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 25px;
+            font-family: fantasy;
+            padding: 15px 20px;
+            color: black;
+        }
+            
+        .button2 
+        {
+            border: none;
+            background: wheat; 
+            border:  4px groove wheat; 
+            outline: none;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: fantasy;
+            padding: 20px 25px;
+            color: black;
+        }
+        .button1:hover 
+        {
+            background-color: cyan;
+        }
+        .button1:active
+        {
+            background-color: lime  
+        }
+    </style>
+    </head>
+    
+    <body background = "image/ifon_5.jpg">
+        <center>
+            <p>
+                <font color="wheat" size="100pt">Реализовать калькулятор в виде формы.</font>
+            </p>
+        </center>
+        <center>
+            <input class="button2" id="num1" placeholder="Введите цифру.." />
+            <br>
+            <div id="operator_btns">
+                <br>
+  <!--<button id="plus" class="operator" onclick="op='+'">+</button>
+  <button id="minus" class="operator" onclick="op='-'">-</button>
+  <button id="times" class="operator" onclick="op='*'">x</button>
+  <button id="divide" class="operator" onclick="op='/'">:</button> !-->
+                <button id="plus" class="button1" onclick="op='+'">+</button>
+                <button id="minus" class="button1" onclick="op='-'">-</button>
+                <button id="times" class="button1" onclick="op='*'">x</button>
+                <button id="divide" class="button1" onclick="op='/'">:</button> 
+                <br>
+            </div>
+            <br>
+            <input class="button2" id="num2" placeholder="Введите цифру.." />
+            <br>
+            <br>
+            <button class="button" onclick="func()">равняется</button>
+        </center>
+        <center>
+            <p class="button2" id="result"></p>
+        </center>
+        <script>
+            var op; //выбранный оператор
+            function func() {
+                var result;
+                var num1 = Number(document.getElementById("num1").value);
+                var num2 = Number(document.getElementById("num2").value);
+                switch (op) 
+                {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        if (num2) 
+                        {
+                            result = num1 / num2;
+                        } else 
+                        {
+                            result = 'бесконечность';
+                        }
+                        break;
+                    default:
+                        result = 'выберите операцию';
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

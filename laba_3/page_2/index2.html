@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Задание 2</title>
+    <meta charset="utf-8">
+        <link rel="shortcut icon" href="image/wolf.png" type="image/x-icon">
+        <style>    
+                        .button 
+            {
+                /* Сбрасываем дефолтные стили */
+                border: none;
+                outline: none;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: fantasy;
+                padding: 20px 25px;
+                border-radius: 200px;
+                color: black;
+            }
+            .button:hover 
+            {
+                background-color: cyan;
+            }
+            .inputStroka
+            {
+                background: white; 
+                border:  4px groove white; 
+                outline: none;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                font-size: 25px;
+                font-family: fantasy;
+                padding: 15px 20px;
+                color: black;
+            }
+           
+        </style>
+    </head>
+    
+    <body background = "image/ifon_6.jpg">
+        <center>
+            <font size="5" color="wheat">
+                <br>  
+                <i>
+                    <h3> В предложении удалить наиболее часто встречающуюся букву. Вывести результат в новом окне. </h3> 
+                </i>
+                
+            </font>
+            <br><br><br>
+            <textarea class = "inputStroka" name="text" id="input" cols="40" rows="3" placeholder="Введите предложение.."></textarea> <br>
+            <div id="button_block">
+                <button class="button" id="click">Результат</button>
+                <br><br> <br><br>
+            </div>
+        </center>
+        <script>
+            
+            
+            function ShowWindow(text) 
+            {
+                let NewWindow = window.open("url","window_title","newWindow","width=300,height=400")
+                NewWindow.document.write(text);
+            }
+            
+            click.onclick = function () 
+            {
+  
+                let max_letter_count = -Infinity;
+                let max_letter;
+                for (let [letter, letter_count] of Object.entries(count(input.value))) 
+                {
+                    if (!letter.match(/^[A-Za-zа-яА-Я]+$/i)) 
+                    {
+                        continue
+                    }
+                    if (letter_count > max_letter_count) 
+                    {
+                        max_letter_count = letter_count;
+                        max_letter = letter;
+                    }
+                }
+                ShowWindow(input.value.split(max_letter).join(''))
+            
+            function count(iterable) {
+                const elements = {}
+                for (let element of iterable) 
+                {
+                    if (element in elements) 
+                    {
+                        elements[element]++
+                    } 
+                    else 
+                    {
+                        elements[element] = 1
+                    }
+                }
+                return elements
+            }
+        </script>
+    </body>
+</html>

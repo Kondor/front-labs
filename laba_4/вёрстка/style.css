@@ -1,0 +1,303 @@
+* {
+    padding: 0;                     /* внутренний отступ */
+    margin: 0;                      /* внешний отступ */
+    box-sizing: border-box;         /* внутренная рамка */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;                 /* цвет как у "родителя" */
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #1e1e1e;
+}
+
+header {
+    background-color: #1e1e1e;
+    height: 226px;
+    
+}
+
+input {
+    background-color: #1e1e1e;
+}
+
+.container {
+    width: 1024px;          /* ширина контейнера */
+    height: 226px;
+
+    margin: 0 auto;         /* контейнер по центру */
+}
+
+/* Header */
+
+/* логотоип и информация */
+.logo-info {
+    width: 1024px;
+    height: 83px;
+   /* border: 1px solid red; */
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* информация (номер телефона) */
+.info-number {
+    font-size: 35px;
+    line-height: 24px;
+    color: gray;
+    font-weight: 400;
+    font-family: "Oranienbaum";
+    display: flex;
+    margin-right: 70px;
+}
+
+/* цвет для выделния фрагмента */
+.colortext {
+    font-size: 35px;
+    line-height: 24px;
+    color: #730606;
+    font-weight: 400;
+    font-family: "Oranienbaum"; /* Красный цвет выделения */
+}
+
+/* информация (почта) */
+.info-pochta {
+    font-size: 14px;
+    line-height: 24px;
+    color: #f8b475;
+    font-family: "Arial";
+    margin-left: 118px;
+    display: flex;
+    margin-top: 2px;
+}
+
+/* блок навигация - поиск */
+.navigator-search {
+    width: 1024px;
+    height: 16px;
+   /* border: 1px solid blue;*/
+    margin-top: 60px;
+    display: flex;
+    
+    
+}
+
+/* разделитель */
+.razdelit {
+    width: 1px;
+    height: 2px;
+    background-color: #636363;
+    color: #1e1e1e;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+/* навигация */
+.navigator {
+    font-size: 18px;
+    line-height: 24px;
+    color: #f8b475;
+    font-family: "Times New Roman";
+    display: flex;
+   
+    
+}
+
+/* поиск */
+.search {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background-color: #afafaf;
+    margin-left: 200px;
+}
+
+
+/* Section 2 */
+
+.preview {
+    height: 466px;
+    background: url(images/preview.jpg) top center / cover;
+} 
+
+
+/* Section 3 */
+
+.feature {
+    height: 255px;
+    background-color:#E6E6E6
+}
+
+.feature .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item {
+    width: 191px;
+    text-align: center;
+    
+}
+
+.item_logo1 {
+    display: flex;
+    justify-content: center;
+    border: 50%;
+    align-items: center;
+    
+    margin: 0 auto;
+    margin-top: 22px;
+}
+
+/* Section 4 */
+.action {
+    height: 466px;
+    background-color:#E6E6E6;
+    background: url(images/fonAct.jpg) top center / cover;
+}
+
+.action .container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.items {
+    
+    text-align: center;
+    
+}
+
+.titleAct {
+    display: flex;
+    justify-content: center;
+    border: 50%;
+    align-items: center;
+    
+    
+    margin: 0 auto;
+    /*margin-top: 22px;*/
+}
+
+.titleAct1 {
+    width: 453px;
+    height: 49px;
+    margin-top: 38px;
+    
+}
+
+/* Section 5 */
+
+.footer {
+    height: 157px;
+    background-color:#1e1e1e;
+    color: white;
+    background: 
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item2 {
+    width: 191px;
+    text-align: center;
+    
+}
+
+.item_logo2 {
+    display: flex;
+    justify-content: center;
+    border: 50%;
+    align-items: center;
+    
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.colortext1 {
+    font-size: 20px;
+    line-height: 24px;
+    color: wheat;
+    font-weight: 400;
+    font-family: "Oranienbaum"; /* Красный цвет выделения */
+}
+
+.colortext2 {
+    font-size: 20px;
+    line-height: 24px;
+    color: LightCyan;
+    font-weight: 400;
+    font-family: "Oranienbaum"; /* Красный цвет выделения */
+}
+
+a:hover{
+    color:Red;
+    text-decoration: underline;
+    text-decoration: none;
+} 
+            
+
+a:active{
+    color:Cyan;
+}
+        
+.item_logo3 {
+    display: flex;
+    justify-content: center;
+    border: 50%;
+    align-items: center;
+    
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.item3 {
+    height: 400px;
+    width: 260px;
+    text-align: center;
+    
+}
+.feature3 {
+    height: 600px;
+    background-color:white;
+}
+.skills li {
+    padding: 10px 0;
+    transition: transform .5s ease; 
+    cursor: pointer;
+}
+
+.skills li:hover {
+    transform: translateX(10px);
+}
+
+.content {
+    width: 70%;
+    padding: 20px;
+}
+
+.content p {
+    line-height: 20px;
+}
+
+.content a{
+    text-decoration: none;
+     
+}
+
+   .scale {
+    transition: 1s; /* Время эффекта */
+   }
+   .scale:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+

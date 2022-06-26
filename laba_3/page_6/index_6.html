@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Задание 6</title>
+        <meta charset="utf-8">   
+        <link rel="shortcut icon" href="image/wolf.png" type="image/x-icon">
+        <style>
+            .button 
+            {
+                /* Сбрасываем дефолтные стили */
+                border: none;
+                outline: none;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: fantasy;
+                padding: 25px 30px;
+                border-radius: 200px;
+                color: black;
+            }
+            .button:hover 
+            {
+                background-color: cyan;
+            }
+        </style>
+    </head>
+           
+    <!--
+<body bgcolor="#FFFFFF" text="#000000" onload="start(document.forms[0])" onunload="cleartids()">
+<script language="JavaScript">
+timestr = "00:00:00";
+tid = 0;
+pause = 0;
+var to;
+var bcount;
+var tcount;
+function writer(){
+document.write("test"); 
+}
+function time(n) {
+tid=window.setTimeout("time(1)",to);
+today = new Date()
+if(today.getMinutes() < 10){ 
+pad = "0"}
+else 
+pad = "";
+if(today.getSeconds() < 10){ 
+pads = "0"}
+else 
+pads = "";
+timestr=today.getHours()+":"+pad+today.getMinutes()+":"+pads+today.getSeconds();
+document.title = timestr;
+window.clearTimeout(tid);
+tid=window.setTimeout("time()",to);
+}
+function start(x) {
+f=x;
+to=60;
+time(x);
+}
+function cleartids() {
+window.clearTimeout(tid);
+}
+</script>
+
+<p></p>
+!-->
+    <body background = "image/ifon_3.jpg">
+        <script type="text/javascript">  
+            setInterval(function () {  
+                date = new Date(),  
+                h = date.getHours(),  
+                m = date.getMinutes(),
+                s = date.getSeconds(),  
+                h = (h < 10) ? '0' + h : h,  
+                m = (m < 10) ? '0' + m : m,  
+                s = (s < 10) ? '0' + s : s,  
+                document.getElementById('time').innerHTML = h + ':' + m + ':' + s;
+            }, 1000);
+        </script>
+        <center>
+            <p>
+                <font color="wheat" size="100pt">Реализовать идущие часики в заголовке (Title).</font>
+            </p>
+        <span style="color:red; font-size:150pt;padding:5px;">
+            <span id="time">00:00:00</span>
+        </span>
+            <p>
+                <font color="wheat" size="150pt" >В заголовке время тоже идёт!</font>
+            </p>
+        </center>
+        <script>setInterval(() => {
+                document.title = (new Date).toLocaleTimeString()
+            }, 1000)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+@font-face {
+font-family: EchoRevival;
+src: url("EchoRevival.otf");
+}
+
+
+
+body {
+    background: url("fon_lab.jpg") no-repeat center center / cover ;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ -ms-background-size: cover;
+ background-size: cover;
+    padding: 200px 0; /* Отступ сверху и снизу в 100 px */
+}
+
+.container {
+    width: 500px;          /* ширина контейнера */
+    height: 750px;
+
+    margin: 0 auto;         /* контейнер по центру */
+/*    border: 1px solid red;*/
+}
+
+._header {
+    /* 1 - ой блок */
+    display: flex; /* Содержит блочный элементы */
+    justify-content: center;
+    align-items: center;
+    /*border: 2px solid red;*/
+    width: 100%;
+    height: 100px;
+    font-size: 40px;
+    background:
+        url("head_1.jpg") no-repeat;
+    /* чтобы не повторялось, распологалось по центру и растянулась сама картинка во весь блок(cover) */
+    color: white;
+    margin-right: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    background-size: cover;
+    position: relative;
+  /*  border: 1px solid red;*/
+    
+    
+    color: #ffffff;
+/* text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #, 0 0 80px #00ff00, 0 0 90px #00ff00, 0 0 100px #00ff00, 0 0 150px #00ff00;*/
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(191, 226, 255, 0.52), 0 0 21px rgba(191, 226, 255, 0.92), 0 0 34px rgba(191, 226, 255, 0.78), 0 0 54px rgba(191, 226, 255, 0.92);
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background: url(head.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.forma {
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-top: 20px;
+/*  margin: 0 auto;  */       /* контейнер по центру */
+}
+.forma input, 
+.forma label, 
+.forma textarea {
+  display: flex;
+  width: 100%;
+
+}
+.forma input {
+  padding: 0;
+  line-height: 30px;
+  background: #FAAB1B;
+  border-width: 0;
+  color: #f7f3f3;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+ /* border-radius: 7px;*/
+  width: 200px;
+  border-color: #ffffff;
+  border: 1px groove white ;
+  background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(29,127,253,1) 48%, rgba(69,252,170,1) 100%);
+    font-family:iCampanella;
+    font-size: 16px;
+
+        
+    
+}
+
+
+.forma label {
+  margin-bottom: 5px;
+
+    
+/*  color: #FAAB1B; 
+  text-transform: uppercase;*/
+    font-family:EchoRevival;
+  font-size: 25px;
+    color: #ffffff;
+/* text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #, 0 0 80px #00ff00, 0 0 90px #00ff00, 0 0 100px #00ff00, 0 0 150px #00ff00;*/
+
+}
+
+input::placeholder {
+    color: #ffffff;
+    font-size: 16px;
+/* text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #, 0 0 80px #00ff00, 0 0 90px #00ff00, 0 0 100px #00ff00, 0 0 150px #00ff00;*/
+    
+
+    
+  
+    
+    
+}
+
+h3
+{
+  border:1px solid black;
+}
+.content-template{
+  display:none
+}
+
+
+.navi {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    background: url(pol_nav.jpg) no-repeat center center / cover;
+    background-size: cover;
+
+    position: relative;
+    justify-content: center;
+        align-items: center;
+    
+     padding: 0;
+  line-height: 30px;
+  border-width: 0;
+  color: #f7f3f3;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+#pdf-button1 {
+    
+    position: absolute;
+    
+    top: 0%;
+    width: 300px;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    color: white;
+    padding: 30px 40px;
+    margin: 20px 30px;
+    border-radius: 10px;
+  background: rgb(0,224,255);
+background: linear-gradient(90deg, rgba(0,224,255,1) 30%, rgba(5,227,71,0.604079131652661) 67%, rgba(15,99,60,1) 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  transition: .5s
+    
+}
+
+#pdf-button1:hover {
+    background-position: right center;
+}
+}

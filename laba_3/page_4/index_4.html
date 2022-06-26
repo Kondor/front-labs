@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <link rel="shortcut icon" href="image/wolf.png" type="image/x-icon">
+        <title>Задание 4</title>
+        <meta charset="utf-8">
+        <style>
+            .button 
+            {
+                /* Сбрасываем дефолтные стили */
+                border: none;
+                outline: none;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: fantasy;
+                padding: 20px 25px;
+                border-radius: 200px;
+                color: black;
+            }
+            .button:hover 
+            {
+                background-color: cyan;
+            }
+        </style>
+    </head>
+    
+    <body background = "image/backfon4.jpg">
+        <center>
+            <font size="5" color="wheat">
+                <br>
+                <i>
+                    <h3> Реализовать изменение цвета фона при нажатии на кнопки.</h3> 
+                </i>
+            </font>
+            <button class="button" id="ColorRGB">Измененить цвет фона</button>
+        </center>
+        <script>
+            ColorRGB.onclick = () => {
+            r = Math.floor(Math.random() * (256))
+            g = Math.floor(Math.random() * (256))
+            b = Math.floor(Math.random() * (256))
+            color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+            document.body.style.background = color
+            }
+        </script>
+    </body> 
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="image/wolf.png" type="image/x-icon">
+        <title>Задание 1</title>
+        <meta charset="utf-8">    
+        <style>
+        
+            .button 
+            {
+                /* Сбрасываем дефолтные стили */
+                border: none;
+                outline: none;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: fantasy;
+                padding: 20px 25px;
+                border-radius: 200px;
+                color: black;
+            }
+            
+            .button:hover 
+            {
+                background-color: cyan;
+            }
+            
+            .inputStroka
+            {
+                background: white; 
+                border:  4px groove white; 
+                outline: none;
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                font-size: 25px;
+                font-family: fantasy;
+                padding: 15px 20px;
+                color: black;
+            }
+        </style>
+    </head>
+    
+    <body background = "image/ifon_1.jpg">
+        <center>
+            <font size="5" color="wheat">
+                <br>  
+                <i>
+                    <h3> В предложении удалить все слова, состоящие более чем из 5 букв. Вывести результат в новом окне.
+                    </h3> 
+                </i>
+                <br>
+                <textarea class = "inputStroka" name="text" id="input" cols="40" rows="3" placeholder="Введите предложение.."></textarea> 
+                <br>
+                <button class="button" id="snap">Результат</button> 
+            </font>
+        </center>
+        
+        <script>
+           
+            function ShowWindow(text) 
+            {
+                let NewWindow = window.open("url","window_title","newWindow","width=300,height=400")
+                NewWindow.document.write(text);
+            }    
+
+                
+            /*<!-- 
+            Разбираем строку на массив по пробелам.
+            Фильтруем массив с правилом "Элемент длинной больше чем 2".
+            Соединяем массив в строку пробелами. !-->*/
+            snap.onclick = function () 
+            {
+            words = input.value.split(' ').filter(word => word.length <= 5).join(' ');
+               /* words = inputForm.value.split(' ').filter(
+                function search(word)
+                    {
+                        return word.length <=5;
+                    }
+                ).join(' ');
+                */
+                ShowWindow(words);
+            }
+        </script>
+    </body>
+</html>
